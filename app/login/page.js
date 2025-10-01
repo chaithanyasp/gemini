@@ -20,7 +20,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     let mounted = true
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v3.1/all?fields=name,idd,cca2')
       .then(r => r.json())
       .then(data => {
         if (!mounted) return
